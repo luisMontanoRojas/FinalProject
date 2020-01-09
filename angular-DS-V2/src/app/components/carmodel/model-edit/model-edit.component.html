@@ -1,0 +1,29 @@
+<h1>Editar Modelo </h1>
+
+<form (ngSubmit)="onSubmit(modelo)">
+
+    <label><b>Nombre: </b></label>
+    <input class="form-control" type="text" name="name" [(ngModel)]="modelo.name">
+
+    <label><b>Imagen: </b></label>
+    <input class="form-control" type="text" name="urlImage" [(ngModel)]="modelo.urlImage">
+
+    <label><b>Cilindrada: </b></label>
+    <input class="form-control" type="text" name="displacement" [(ngModel)]="modelo.displacement">
+
+    <label><b>Caballos de Fuerza: </b></label>
+    <input class="form-control" type="text" name="horsePower" [(ngModel)]="modelo.horsePower">
+
+    <label><b>Año: </b></label>
+    <input class="form-control" type="text" name="year" [(ngModel)]="modelo.year">
+
+    <label><b>Trans: </b></label>
+    <input class="form-control" type="text" name="transmission" [(ngModel)]="modelo.transmission">
+
+    <label><b>Precio: </b></label>
+    <input class="form-control" type="text" name="basicPrice" [(ngModel)]="modelo.basicPrice">
+
+    <input type="submit" value="Submit" class="btn btn-outline-danger">
+    <button type="button" routerLink="../" class="btn btn-outline-danger">Atras</button>
+
+</form>

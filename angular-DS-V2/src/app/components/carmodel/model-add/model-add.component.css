@@ -1,0 +1,6 @@
+.modal.show {
+    display: block;
+}
+.modal.body{
+    text-size-adjust:auto ;
+}

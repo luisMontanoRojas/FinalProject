@@ -1,0 +1,58 @@
+<div class="card bg-light" [ngClass]="setClasses()">
+    <div class="card-body text-center">
+
+        <b>{{ carbrand.name }}</b>
+        <br>
+        <br>
+        <img src="{{ carbrand.url_logo_image }}" style="width:204px;height:142px;">
+        <br><br>
+        <button (click)="onDelete(carbrand)" class="btn btn-outline-danger">Borrar</button>
+        <!-- The Modal -->
+        <div class="modal" id="myModal" [ngClass]="{'show':showModal}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">{{ carbrand.name }}</h4>
+                        <button type="button" class="btn btn-outline-danger" (click)="showModal=false" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <br>
+                        <b>Nombre: </b> {{ carbrand.name }}
+                        <br>
+                        <b>Nacionalidad: </b> {{ carbrand.nationality }}
+                        <br>
+                        <img src="{{ carbrand.url_logo_image }}" style="width:204px;height:142px;">
+                        <br>
+                        <a href="{{ carbrand.facebook }}" target="_blank">Facebook.com</a>
+                        <br>
+                        <b>Resumen: </b> {{ carbrand.about }}
+                        <br>
+                        <a href="{{ carbrand.oficialPage }}" target="_blank">PaginaOficial.com</a>
+                        <br>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" (click)="showModal=false" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-outline-danger" (click)="showModal=true" data-toggle="modal" data-target="#myModal">
+            Info
+        </button>
+        <br>
+        <button (click)="onModels(carbrand)" class="btn btn-outline-danger">Mis Modelos</button>
+        <button (click)="onEdit(carbrand)" class="btn btn-outline-danger"> Edit</button>
+
+    </div>
+
+
+</div>

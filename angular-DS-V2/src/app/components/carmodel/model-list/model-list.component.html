@@ -1,0 +1,14 @@
+<h2>Crear Modelos</h2>
+<br>
+<app-model-add (modeldadd)="modeldadd($event)"></app-model-add>
+<br>
+<h2>Lista De Modelos</h2>
+<div class="container">
+    <br>
+    <div class="card-columns">
+
+        <app-model-item *ngFor="let carmodel of carmodels" [carmodel]="carmodel" (deleteModel)="deleteModel($event)">
+        </app-model-item>
+
+    </div>
+</div>

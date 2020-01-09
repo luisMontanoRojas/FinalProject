@@ -1,0 +1,17 @@
+<h2>Buscar Marca</h2>
+<br>
+<app-brand-search (searchBrand)="searchBrand($event)"></app-brand-search>
+<br>
+<h2>Crear Marcas</h2>
+<br>
+<app-brand-add (brandadd)="brandadd($event)"></app-brand-add>
+<br>
+<h2>Lista De Marcas</h2>
+<br>
+<div class="container">
+    <div class="card-columns">
+        <app-brand-item *ngFor="let carbrand of carbrands" [carbrand]="carbrand" (deleteBrand)="deleteBrand($event)">
+        </app-brand-item>
+    </div>
+</div>
+<br>

@@ -1,0 +1,16 @@
+<br>
+<div class="media border p-3" [ngClass]="setClasses()">
+    <img src="{{ carmodel.urlImage }}" style="width:284px;height:162px;">
+    <div class="media-body">
+        <h4> {{ carmodel.name }} </h4>
+        <p>
+            <b> Precio: </b> {{ carmodel.basicPrice }} $
+            <b> Cilindrada: </b> {{ carmodel.displacement }}
+            <b> Caballos de Fuerza: </b> {{ carmodel.horsePower }}
+        </p>
+        <p>
+            <b>Transmision: </b> {{ carmodel.transmission }}
+        </p>
+    </div>
+</div>
+<br>

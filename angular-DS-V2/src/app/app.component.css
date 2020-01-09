@@ -1,0 +1,21 @@
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: Arial;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+body {
+    /* background: #f2fcfe; */
+    background: #fff;
+}
+
+p {
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+<h1>Editar Marca </h1>
+
+<form (ngSubmit)="onSubmit(brand)">
+    <label><b>Nombre De La Marca: </b></label>
+    <input class="form-control" type="text" name="name" [(ngModel)]="brand.name">
+
+    <label><b>Nacionalidad De La Marca: </b></label>
+    <input class="form-control" type="text" name="nationality" [(ngModel)]="brand.nationality">
+
+    <label><b>Imagen Logo De La Marca (Url): </b></label>
+    <input class="form-control" type="text" name="url_logo_image" [(ngModel)]="brand.url_logo_image">
+
+    <label><b>Facebook De La Marca: </b></label>
+    <input class="form-control" type="text" name="facebook" [(ngModel)]="brand.facebook">
+
+    <label><b>Resumen De La Marca: </b></label>
+    <input class="form-control" type="text" name="about" [(ngModel)]="brand.about">
+
+    <label><b>Pagina Oficial De La Marca (url): </b></label>
+    <input class="form-control" type="text" name="oficialPage" [(ngModel)]="brand.oficialPage">
+
+
+    <input type="submit" value="Submit" class="btn btn-outline-danger">
+    <button type="button" routerLink="/" class="btn btn-outline-danger">Atras</button>
+
+</form>

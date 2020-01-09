@@ -1,0 +1,66 @@
+<!-- The Modal -->
+<div class="modal fade " (ngSubmit)="onSubmit()" id="modal" tabindex="-1" role="dialog" aria-labelledby="idtitle" aria-hidden="true" [ngClass]="{'show':showModal}">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="idtitle">Crear Nueva Marca</h4>
+                <button type="button" class="close" (click)="showModal=false" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <form class="form" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label><b>Nombre: </b></label>
+                            <input type="text" name="name" [(ngModel)]="name" placeholder="Add name...">
+
+                            <label><b> Pais: </b></label>
+                            <input type="text" name="nationality" [(ngModel)]="nationality" placeholder="nationality...">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Imagen Logo De La Marca (Url): </b></label>
+                            <input class="form-control" type="text" name="url_logo_image" [(ngModel)]="url_logo_image" placeholder="url_logo_image...">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Facebook De La Marca: </b></label>
+                            <input class="form-control" type="text" name="facebook" [(ngModel)]="facebook" placeholder="facebook...">
+                        </div>
+
+                        <!-- <div class="form-group">
+                                    <label><b>Ubicacion De La Marca en Cbba: </b></label>
+                                    <input class="form-control" type="text" name="ubication" [(ngModel)]="ubication" placeholder="ubication...">
+                                </div> -->
+
+                        <div class="form-group">
+                            <label><b>Resumen De La Marca: </b></label>
+                            <input class="form-control" type="text" name="about" [(ngModel)]="about" placeholder="about...">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Pagina Oficial De La Marca (url): </b></label>
+                            <input class="form-control" type="text" name="oficialPage" [(ngModel)]="oficialPage" placeholder="oficialPage...">
+                        </div>
+
+                        <div class="modal-footer">
+                            <input type="submit" value="Submit" class="btn btn-outline-danger">
+                            <button type="button" class="btn btn-outline-danger" (click)="showModal=false" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-outline-danger" (click)="showModal=true" data-toggle="modal" data-target="#myModal">
+    Crear Nueva Marca
+</button>
+<br>

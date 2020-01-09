@@ -1,0 +1,56 @@
+<div class="card bg-light" [ngClass]="setClasses()">
+    <div class="card-body text-center">
+
+        <b>{{ carmodel.name }}</b>
+        <br>
+        <br>
+        <img src="{{ carmodel.urlImage }}" style="width:254px;height:112px;">
+        <br><br>
+        <button (click)="onDelete(carmodel)" class="btn btn-outline-danger">Borrar</button>
+        <!-- The Modal -->
+        <div class="modal" id="myModal" [ngClass]="{'show':showModal}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">{{ carmodel.name }}</h4>
+                        <button type="button" class="close" (click)="showModal=false" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                        <b>Nombre: </b> {{ carmodel.name }}
+                        <br>
+                        <b>Precio: </b> {{ carmodel.basicPrice }}
+                        <br>
+                        <img src="{{ carmodel.urlImage }}" style="width:454px;height:142px;">
+                        <br>
+
+                        <br>
+                        <b>Cilindrada: </b> {{ carmodel.displacement }}
+                        <br>
+                        <b>caballos de fuerza: </b> {{ carmodel.horsePower }}
+                        <br>
+                        <b>Transmision: </b> {{ carmodel.transmission }}
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" (click)="showModal=false" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-outline-danger" (click)="showModal=true" data-toggle="modal" data-target="#myModal">
+            Info
+        </button>
+        <br>
+        <button (click)="onEditM(carmodel)" class="btn btn-outline-danger"> Edit</button>
+        <!-- <br>
+        <button (click)="onModels(carbrand)" class="btn btn-primary">Mis Modelos</button>
+        <button (click)="onEdit(carbrand)" class="btn btn-primary"> Edit</button> -->
+
+    </div>
+
+</div>
